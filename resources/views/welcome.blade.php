@@ -89,11 +89,12 @@
                 <form action="{{route('articles.show', array('article' => $article))}}" method="get">
                 <div class="card mt-3"  style="width: 18vw;">
                     <div class="single-post post-style-1">
-                        <div class="blog-image">
-                            <img src="{{asset('images/averie-woodard-319832.jpg')}}" alt="">
+                    <div class="blog-image" style="width: 18vw; height: 18vh; background: url('{{asset("$article->thumbnail")}}'); background-size:cover;">
+                        {{-- <img src="{{asset("$article->thumbnail")}}" alt="" style="width:100%; height:auto;"> --}}
+                        {{$article->thumbnail}}
                         </div>
                         <div class="blog-info">
-                            <h1>{{$article->title}}</h1>
+                            <h1 class="text-center">{{$article->title}}</h1>
                         </div>
                     </div>
                     <input class="btn btn-success" type="submit" value="Découvrir">

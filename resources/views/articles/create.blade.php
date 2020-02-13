@@ -18,11 +18,14 @@
                         @csrf
                         <label class="mb-2" for="title">Titre</label>
                         <input class="form-control mb-3" type="text" name="title" id="title">
-                        <label class="mb-2"for="img">Miniature de l'article</label>
-                        <input class="form-control mb-3" type="file" id="img" name="img">
+
+                        <label class="mb-2"for="thumbnail">Miniature de l'article</label>
+                        <input type="file" class="form-control mb-3" id="thumbnail" name="thumbnail">
+
                         <label class="mb-2" for="content">Votre article</label>
                         <textarea class="form-control mb-3" id="content" name="content">
                         </textarea>
+
                         <input class="btn btn-success mt-3" type="submit" value="Créer article">
                     </form>
                 </div>

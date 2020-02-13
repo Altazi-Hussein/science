@@ -41,8 +41,12 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        echo $request->file('img')->store('upload');
-        //Article::create($request->except(['_token']) + ['user_id' => Auth::user()->id]);
+        $imageArticle =  $request->file('thumbnail')->store('upload');
+        echo $imageArticle;
+        $article = Article::create($request->except(['_token']) + ['user_id' => Auth::user()->id]/*  + ['thumbnail' => $imageArticle] */);
+        $article->thumbnail = $imageArticle;
+        $article->save();
+        return redirect()->route('articles.accueil');
        //Article::create(['user_id' => Auth::user()->id] + $request->except(['_token']));
         /*$article = new Article;
         $article->title = $request->title;
@@ -50,8 +54,6 @@ class ArticleController extends Controller
         $article->user_id = Auth::user()->id;
         $article->save();
         $article->save($request->title,$request->content, Auth::user()->id);*/
-
-        return "c bon";
     }
 
     /**

@@ -15,7 +15,7 @@
     return view('welcome');
 }); */
 
-Route::get('/', 'ArticleController@accueil');
+Route::get('/', 'ArticleController@accueil')->name('articles.accueil');
 
 Auth::routes();
 
