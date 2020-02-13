@@ -15,8 +15,12 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        
         return view('articles.index', ['articles' => Article::all()]);
+    }
+
+    public function accueil()
+    {
+        return view('welcome', ['articles' => Article::all()]);
     }
 
     /**
@@ -37,7 +41,8 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        Article::create($request->except(['_token']) + ['user_id' => Auth::user()->id]);
+        echo $request->file('img')->store('upload');
+        //Article::create($request->except(['_token']) + ['user_id' => Auth::user()->id]);
        //Article::create(['user_id' => Auth::user()->id] + $request->except(['_token']));
         /*$article = new Article;
         $article->title = $request->title;
@@ -57,7 +62,7 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('articles.show', ['article' => Article::findOrFail($id)]);
     }
 
     /**

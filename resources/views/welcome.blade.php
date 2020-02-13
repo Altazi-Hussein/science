@@ -82,9 +82,26 @@
 
 
 <section class="blog-area section">
-    <div class="container bg-info mt-5">
+    <div class="container mt-5">
         <div class="d-flex justify-content-around flex-wrap">
-                <div class="card">
+
+                @foreach ($articles as $article)
+                <form action="{{route('articles.show', array('article' => $article))}}" method="get">
+                <div class="card mt-3"  style="width: 18vw;">
+                    <div class="single-post post-style-1">
+                        <div class="blog-image">
+                            <img src="{{asset('images/averie-woodard-319832.jpg')}}" alt="">
+                        </div>
+                        <div class="blog-info">
+                            <h1>{{$article->title}}</h1>
+                        </div>
+                    </div>
+                    <input class="btn btn-success" type="submit" value="Découvrir">
+                </div>
+                </form>
+                  {{--   {{$article}}<br> --}}
+                @endforeach
+                <div class="card mt-3"  style="width: 18vw;">
                     <div class="single-post post-style-1">
                         <div class="blog-image">
                             <img src="{{asset('images/averie-woodard-319832.jpg')}}" alt="">
@@ -95,10 +112,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card mt-3"  style="width: 18vw;">
                     <div class="single-post post-style-1">
                         <div class="blog-image">
-                            <img src="{{asset('images/averie-woodard-319832.jpg')}}" alt="">
+                            <img     src="{{asset('images/averie-woodard-319832.jpg')}}" alt="">
                         </div>
                         <a class="avatar" href="#">Clique</a>
                         <div class="blog-info">
@@ -106,18 +123,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card mt-3" style="width: 18vw;">
                     <div class="single-post post-style-1">
                         <div class="blog-image">
                             <img src="{{asset('images/averie-woodard-319832.jpg')}}" alt="">
                         </div>
                         <a class="avatar" href="#">Clique</a>
                         <div class="blog-info">
-                            cepok
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus repudiandae deserunt beatae rerum corrupti, saepe dignissimos. Nisi hic voluptatum quidem quo laborum. Iste accusantium repudiandae quibusdam vero incidunt commodi delectus.
                         </div>
                     </div>
                 </div> {{-- Fin de card --}}
-                <div class="card">
+                <div class="card mt-3"  style="width: 18vw;">
                     <div class="single-post post-style-1">
                         <div class="blog-image">
                             <img src="{{asset('images/averie-woodard-319832.jpg')}}" alt="">

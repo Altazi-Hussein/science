@@ -14,10 +14,12 @@
 
                 <div class="card-body">
                     {{ "test" }}
-                    <form action="{{route('articles.store')}}" method="post">
+                    <form action="{{route('articles.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <label class="mb-2" for="title">Titre</label>
                         <input class="form-control mb-3" type="text" name="title" id="title">
+                        <label class="mb-2"for="img">Miniature de l'article</label>
+                        <input class="form-control mb-3" type="file" id="img" name="img">
                         <label class="mb-2" for="content">Votre article</label>
                         <textarea class="form-control mb-3" id="content" name="content">
                         </textarea>
