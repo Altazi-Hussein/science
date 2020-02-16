@@ -19,9 +19,9 @@
                         {!!html_entity_decode($article->content)!!} 
                         <hr>
                         @if (Auth::check() && Auth::user()->id == $article->user->id)
-                            <a class="btn btn-info btn-sm float-right" href="route('articles.edit')">Éditer l'article</a>
-                            @else
-                            {{"non"}}
+                            <form action="{{ route('articles.edit', [$article]) }}" method="get">
+                                <button type="submit" class="btn btn-info btn-sm float-right">Éditer l'article</button>
+                            </form>
                         @endif
                 </div>
             </div>

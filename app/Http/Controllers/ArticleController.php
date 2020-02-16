@@ -16,13 +16,13 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        return view('articles.index', ['articles' => Article::all()]);
+        return view('articles.index', ['articles' => Article::orderBy('created_at', 'desc')->get()]);
     }
 
-    public function accueil()
+    /* public function accueil()
     {
         return view('welcome', ['articles' => Article::all()]);
-    }
+    } */
 
     /**
      * Show the form for creating a new resource.
@@ -76,7 +76,7 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('articles.edit', ['article' => Article::findOrFail($id)]);
     }
 
     /**
@@ -88,7 +88,7 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return $request;
     }
 
     /**
