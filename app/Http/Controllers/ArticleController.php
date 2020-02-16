@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Article;
+use Illuminate\Support\Str;
+use App\{Article, Comment};
 use Auth;
 
 class ArticleController extends Controller
@@ -41,7 +42,7 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        $imageArticle =  $request->file('thumbnail')->store('upload');
+        $imageArticle =  $request->file('thumbnail')->store('upload', 'public');
         echo $imageArticle;
         $article = Article::create($request->except(['_token']) + ['user_id' => Auth::user()->id]/*  + ['thumbnail' => $imageArticle] */);
         $article->thumbnail = $imageArticle;
@@ -64,7 +65,7 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        return view('articles.show', ['article' => Article::findOrFail($id)]);
+        return view('articles.show', ['article' => Article::findOrFail($id), 'comments' => Comment::where('article_id', $id)->get()]);
     }
 
     /**

@@ -10,10 +10,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Rédiger un article</div>
 
                 <div class="card-body">
-                    {{ "test" }}
                     <form action="{{route('articles.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <label class="mb-2" for="title">Titre</label>
@@ -21,7 +20,6 @@
 
                         <label class="mb-2"for="thumbnail">Miniature de l'article</label>
                         <input type="file" class="form-control mb-3" id="thumbnail" name="thumbnail">
-
                         <label class="mb-2" for="content">Votre article</label>
                         <textarea class="form-control mb-3" id="content" name="content">
                         </textarea>

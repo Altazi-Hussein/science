@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Article extends Model
+class Comment extends Model
 {
-    protected $fillable = ['title', 'content', 'user_id'];
+    protected $fillable = ['title', 'content', 'user_id', 'article_id'];
 
     public function user()
     {
