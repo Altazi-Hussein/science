@@ -12,4 +12,9 @@ class Comment extends Model
     {
         return $this->belongsTo(\App\User::class);
     }
+
+    public function article()
+    {
+        return $this->belongsTo(\App\Article::class);
+    }
 }

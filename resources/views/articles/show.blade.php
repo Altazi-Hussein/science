@@ -16,7 +16,13 @@
                         @endif
                         <br>Rédigé par {{$article->user->name}}.</p>
                         <hr>
-                        {!!html_entity_decode($article->content)!!}
+                        {!!html_entity_decode($article->content)!!} 
+                        <hr>
+                        @if (Auth::check() && Auth::user()->id == $article->user->id)
+                            <a class="btn btn-info btn-sm float-right" href="route('articles.edit')">Éditer l'article</a>
+                            @else
+                            {{"non"}}
+                        @endif
                 </div>
             </div>
             @if (Auth::check())
