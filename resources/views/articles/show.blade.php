@@ -3,6 +3,9 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+        <a class="btn btn-primary btn-sm h-25" href="{{route('home')}}">
+        <
+        </a>
         <div class="col-md-8">
             <div class="card">
                 {{-- <div class="card-header">Dashboard</div> --}}
