@@ -47,7 +47,7 @@ class ArticleController extends Controller
         $article = Article::create($request->except(['_token']) + ['user_id' => Auth::user()->id]/*  + ['thumbnail' => $imageArticle] */);
         $article->thumbnail = $imageArticle;
         $article->save();
-        return redirect()->route('articles.accueil');
+        return redirect()->route('articles.index');
        //Article::create(['user_id' => Auth::user()->id] + $request->except(['_token']));
         /*$article = new Article;
         $article->title = $request->title;

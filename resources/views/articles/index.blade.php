@@ -1,26 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+<section class="blog-area section">
+    <div class="container mt-5">
+        <div class="d-flex justify-content-around flex-wrap">
 
-                <div class="card-body">
-                    @foreach ($articles as $article)
-                        <p>{{$article->title}}</p>
-                        {!!html_entity_decode($article->content)!!}
-                        <p>{{$article->user_id}}</p>
-                        <hr>
-                    @endforeach
-                    <form action="{{route('articles.create')}}" method="get">
-                        <input class="btn btn-success" type="submit" value="Créer article">
-                    </form>
+                @foreach ($articles as $article)
+                <form action="{{route('articles.show', array('article' => $article))}}" method="get">
+                <div class="card mt-3"  style="width: 18vw;">
+                    <div class="single-post post-style-1">
+                    <div class="blog-image" style="width: 18vw; height: 18vh; background: url('{{asset("storage/$article->thumbnail")}}'); background-size:cover;">
+                        {{-- <img src="{{asset("storage/$article->thumbnail")}}" alt="" style="width:100%; height:auto;"> --}}
+                        </div>
+                        <div class="blog-info d-flex flex-column">
+                            <button class="btn mt-2" type="submit"><h4 id="h4">{{$article->title}}</h4></button>
+                            {{-- <p>{!!html_entity_decode(str::limit($article->content,20))!!}</p> --}}
+                        </div>
+                    </div>
+                    {{-- <input class="btn btn-success" type="submit" value="Découvrir"> --}}
                 </div>
+                </form>
+                @endforeach
             </div>
+            <a href="{{route('articles.create')}}">Créer un article</a>
         </div>
     </div>
-</div>
 
+</section>
 @endsection
