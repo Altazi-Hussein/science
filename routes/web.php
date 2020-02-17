@@ -22,4 +22,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/articles', 'ArticleController');
+
 Route::post('/comments', 'CommentController@store')->name('comments.store');
