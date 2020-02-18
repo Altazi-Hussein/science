@@ -13,3 +13,26 @@ Le projet au sens scolaire n'étant que celui de la réalisation d'un Webzine de
 
 Ainsi, au niveau des fonctionnalités actuelles:
 
+`→ Page d'accueil du site (avec ou sans session de connexion):`
+![alt test](images/index_article.png)
+
+`→ Rédaction d'un article avec ajout de sa miniature:`
+![alt test](images/create_article.png)
+
+`→ Affichage de l'article pour un lecteur (ici le lecteur est aussi connecté en tant que rédacteur de l'article, le bouton d'édition de l'article s'affiche donc).`
+![alt test](images/show_article.png)
+
+`→ Publication d'un commentaire sous l'article + affichage des commentaires déjà présents en lien avec ledit article.`
+![alt test](images/create_comment.png)
+
+## Fonctionnalités à venir
+
+Ce projet n'étant qu'une première ébauche, il a vocation a être amélioré en vue d'être présenté comme fonctionnel en tout points (du moins les plus nécessaires).
+
+Les possibilités d'évolution à venir seront, en priorité, la gestion d'erreurs et d'exceptions générées par les utilisateurs et rédacteurs.
+
+Niveau graphique et éléments textuels, il sera ajouté des objets "Anecdote" qui seront affichés de manière aléatoire sur le site internet. Il sera sujet de petits faits scientifique d'une ligne ou deux, qui susciteront l'intérêt du visiteur du site afin qu'il clique sur l'anecdote et soit redirigé vers des articles d'une catégorie similaire.
+
+En lien avec le point au-dessus, ajout et spécification pour chaque article d'une catégorie à laquelle il appartient afin d'améliorer l'ergonomie et la facilité de navigation sur le Webzine (afficher seulement les articles d'une catégorie, proposer d'autres articles d'une même catégorie après lecture d'un d'entre eux, etc...).
+
+<i>Rédaction & réalisation du Webzine: Ali Hussein.</i>
