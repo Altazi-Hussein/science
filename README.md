@@ -1,78 +1,38 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# Projet de Webzine / site d'articles scientifiques
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+Le projet part initialement d'une consigne d'exercice, supposé réalisé un .pdf d'un faut Webzine.
 
-## About Laravel
+Finalement il fut convenu de réaliser, à l'aide de Laravel, un réel site web sur lequel il sera possible de rédiger des articles scientifiques, de créer un compte avec de poster des commentaires, d'ajouter des anecdotes et petites phrases d'accroches sporadiques à travers l'interface du Webzine afin de susciter l'intérêt des lecteurs sur certains domaines et catégories.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+D'une manière plus globale, ce projet s'ancre dans une volonté de reprendre les codes de la fameuse émission "C'est pas sorcier" sous format Webzine, à savoir vulgariser dans un court format certains faits et anecdotes scientifiques qui sont soit peu connues mais très intéressantes, soit très connues du grand public mais mal ou pas comprises.
+(Ex.: Qu'est ce qu'un trou noir ? / Comment l'eau du robinet arrive t-elle aux étages sans électricité ? / Déconstruire certains mythes et idées reçues).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Stade d'avancement du projet
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Le projet au sens scolaire n'étant que celui de la réalisation d'un Webzine de quelques articles rédigés, le groupe mis en place certaines fonctionnalités annexes, bonne occasion de s'entraîner et s'améliorer aux différentes technologies du Web vues par certains des membres du groupe (Ali Hussein et Valentin Do Espirito Santo), telles que l'HTML/CSS, Laravel, PHP, Javascript ou encore Bootstrap.
 
-## Learning Laravel
+Ainsi, au niveau des fonctionnalités actuelles:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+`→ Page d'accueil du site (avec ou sans session de connexion):`
+![alt test](images/index_article.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+`→ Rédaction d'un article avec ajout de sa miniature:`
+![alt test](images/create_article.png)
 
-## Laravel Sponsors
+`→ Affichage de l'article pour un lecteur (ici le lecteur est aussi connecté en tant que rédacteur de l'article, le bouton d'édition de l'article s'affiche donc).`
+![alt test](images/show_article.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+`→ Publication d'un commentaire sous l'article + affichage des commentaires déjà présents en lien avec ledit article.`
+![alt test](images/create_comment.png)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+## Fonctionnalités à venir
 
-## Contributing
+Ce projet n'étant qu'une première ébauche, il a vocation a être amélioré en vue d'être présenté comme fonctionnel en tout points (du moins les plus nécessaires).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Les possibilités d'évolution à venir seront, en priorité, la gestion d'erreurs et d'exceptions générées par les utilisateurs et rédacteurs.
 
-## Code of Conduct
+Niveau graphique et éléments textuels, il sera ajouté des objets "Anecdote" qui seront affichés de manière aléatoire sur le site internet. Il sera sujet de petits faits scientifique d'une ligne ou deux, qui susciteront l'intérêt du visiteur du site afin qu'il clique sur l'anecdote et soit redirigé vers des articles d'une catégorie similaire.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+En lien avec le point au-dessus, ajout et spécification pour chaque article d'une catégorie à laquelle il appartient afin d'améliorer l'ergonomie et la facilité de navigation sur le Webzine (afficher seulement les articles d'une catégorie, proposer d'autres articles d'une même catégorie après lecture d'un d'entre eux, etc...).
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<i>Rédaction & réalisation du Webzine: Ali Hussein.</i>
