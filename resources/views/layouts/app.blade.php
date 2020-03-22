@@ -47,6 +47,7 @@
         </a>
         @if(Auth::check())
         <a href="{{route('articles.create')}}">Créer un article</a>
+        <a class="pl-2" href="{{route('anecdotes.create')}}">Ajouter une anecdote</a>
         @endif
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -98,6 +99,7 @@
 <div class="col-xs-1 text-center d-flex justify-content-center align-items-center" style="height: 300px; background: url('{{asset('images/slider-1.jpg')}}'); background-size:cover;">
 <h1 style="font-family: Mistral" class="display-3 text-light">C'est Toujours Pas Sorcier</h1>
 </div>
+@yield('anecdote')
 
         <main class="py-4">
             @yield('content')

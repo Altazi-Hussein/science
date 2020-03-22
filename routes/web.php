@@ -16,11 +16,12 @@
 }); */
 
 Route::get('/', 'ArticleController@index')->name('articles.index');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/articles', 'ArticleController');
+
+Route::resource('/anecdotes', 'AnecdoteController');
 
 Route::post('/comments', 'CommentController@store')->name('comments.store');

@@ -4,7 +4,6 @@
 <section class="blog-area section">
     <div class="container mt-5">
         <div class="d-flex justify-content-around flex-wrap">
-
                 @foreach ($articles as $article)
                 <form action="{{route('articles.show', array('article' => $article))}}" method="get">
                 <div class="card mt-3"  style="width: 18vw;">

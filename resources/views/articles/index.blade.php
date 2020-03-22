@@ -1,8 +1,17 @@
 @extends('layouts.app')
 
+@section('anecdote')
+<h4 class="text-center shadow p-3 mb-5 bg-white rounded">
+    {{$anecdote[0]->content}}
+    @if ($anecdote[0]->article)
+        <a href="{{route('articles.show', $anecdote[0]->article_id)}}">Découvrir l'article</a>
+    @endif
+</h4>
+@endsection
+
 @section('content')
 <section class="blog-area section">
-    <div class="container mt-5">
+    <div class="container">
         <div class="d-flex justify-content-around flex-wrap">
                 @foreach ($articles as $article)
                 <form action="{{route('articles.show', array('article' => $article))}}" method="get">
